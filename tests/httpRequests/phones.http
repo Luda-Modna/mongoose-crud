@@ -1,0 +1,15 @@
+###
+GET http://localhost:5001/api/phones
+
+###
+POST http://localhost:5001/api/phones
+Content-Type: application/json
+
+{
+  "brand": "Samsung",
+  "model": "XS",
+  "releaseYear": 2025,
+  "price": 27999,
+  "color": "green",
+  "description": "New"
+}

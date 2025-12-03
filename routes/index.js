@@ -7,6 +7,6 @@ const router = Router();
 
 router.use('/users', userRouter);
 router.use('/posts', postRouter);
-router.use('/phone', phoneRouter);
+router.use('/phones', phoneRouter);
 
 module.exports = router;
