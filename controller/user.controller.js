@@ -181,3 +181,27 @@ module.exports.createUserPhone = async (req, res, next) => {
     next(err);
   }
 };
+
+module.exports.getUserPhones = async (req, res, next) => {
+  const { userId } = req.params;
+
+  try {
+    const foundPhones = await User.aggregate()
+      .match({ _id: new mongoose.Types.ObjectId(userId) })
+      .lookup({
+        from: 'phones',
+        localField: '_id',
+        foreignField: 'userId',
+        as: 'userPhones',
+      })
+      .project({ userPhones: 1, _id: 0 });
+
+    if (!foundPhones.length) {
+      return next(createHttpError(404, 'User Not Found'));
+    }
+
+    res.status(200).send({ data: foundPhones });
+  } catch (err) {
+    next(err);
+  }
+};

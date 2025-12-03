@@ -44,7 +44,7 @@ Content-Type: application/json
   "body":"Some new post 4"
 }
 
-GET http://localhost:5001/api/users/65bfb4b98f78c3d93b668251/posts
+GET http://localhost:5001/api/users/6930442914085f9250c5758a/posts
 
 GET http://localhost:5001/api/posts
 
@@ -61,5 +61,5 @@ Content-Type: application/json
   "description": "New"
 }
 
-
-GET http://localhost:5001/api/users/6930442914085f9250c5758a/posts
+###
+GET http://localhost:5001/api/users/6930442914085f9250c5758a/phones
