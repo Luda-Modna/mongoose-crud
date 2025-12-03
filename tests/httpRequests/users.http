@@ -4,9 +4,9 @@ POST http://localhost:5001/api/users
 Content-Type: application/json
 
 {
-  "firstName":"Test",
+  "firstName":"Testtwo",
   "lastName":"Testovych",
-  "email":"t@t.com",
+  "email":"t1@t.com",
   "birthday":"2000-01-01",
   "gender": "male",
   "isMerried":true,
@@ -47,3 +47,19 @@ Content-Type: application/json
 GET http://localhost:5001/api/users/65bfb4b98f78c3d93b668251/posts
 
 GET http://localhost:5001/api/posts
+
+###
+POST http://localhost:5001/api/users/6930442914085f9250c5758a/phones
+Content-Type: application/json
+
+{
+  "brand": "Apple",
+  "model": "iPhone 11",
+  "releaseYear": 2020,
+  "price": 20999,
+  "color": "gold",
+  "description": "New"
+}
+
+
+GET http://localhost:5001/api/users/6930442914085f9250c5758a/posts
