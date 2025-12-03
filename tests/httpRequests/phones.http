@@ -13,3 +13,18 @@ Content-Type: application/json
   "color": "green",
   "description": "New"
 }
+
+###
+GET http://localhost:5001/api/phones/6930475d513238022337856c
+
+###
+PATCH http://localhost:5001/api/phones/6930475d513238022337856c
+Content-Type: application/json
+
+{
+  "brand": "Samsung",
+  "model": "X9"
+}
+
+###
+DELETE http://localhost:5001/api/phones/6930475d513238022337856c
