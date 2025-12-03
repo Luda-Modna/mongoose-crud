@@ -28,3 +28,27 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5001/api/phones/6930475d513238022337856c
+
+
+
+###
+GET http://localhost:5001/api/phones/123
+
+###
+
+POST http://localhost:5001/api/phones
+Content-Type: application/json
+
+{
+  "brand": "",
+  "price": -5
+}
+
+###
+PATCH http://localhost:5001/api/phones/69304794513238022337856f
+Content-Type: application/json
+
+{
+  "brand": "Samsung",
+  "model": "X9",
+}
